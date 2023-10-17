@@ -15,7 +15,7 @@ public class Main {
 
 
         CSVReader csvReader = new CSVReader();
-        csvReader.ReadCSV("C:\\Users\\aluno\\Desktop\\konorat\\archive\\spotify-2023.csv");
+        csvReader.ReadCSV("/home/matheus/Desktop/archive/spotify-2023.csv");
         List<MusicInfo> musicInfoList = csvReader.getMusicInfoList();
 
         boolean sair = true;
@@ -32,46 +32,70 @@ public class Main {
             Scanner in = new Scanner(System.in);
 
             String op = in.nextLine();
-            System.out.println(op);
 
             switch(op) {
                 case "1":
-                List<MusicInfo> list1 = new ArrayList<MusicInfo>(musicInfoList);
-                List<MusicInfo> selectionTrack = selectionSort(list1, "nome");
+                    List<MusicInfo> list1 = new ArrayList<MusicInfo>(musicInfoList);
+                    long startTime = System.currentTimeMillis();
+                    List<MusicInfo> selectionTrack = selectionSort(list1, "nome");
+                    long endTime = System.currentTimeMillis();
+                    long executionTime = endTime - startTime;
+                    System.out.println(executionTime);
 
-                for (MusicInfo musicInfo : selectionTrack) {
-                    System.out.println("Ordenação por Seleção Nome Música: " + musicInfo);
-                }
-                break;
+//                    for (MusicInfo musicInfo : selectionTrack) {
+//                        System.out.println("Ordenação por Seleção Nome Música: " + musicInfo);
+//                    }
+
+                    break;
 
                 case "2":
-                List<MusicInfo> list2 = new ArrayList<MusicInfo>(musicInfoList);
-                List<MusicInfo> insertionTrack = insertionSort(list2, "nome");
+                    List<MusicInfo> list2 = new ArrayList<MusicInfo>(musicInfoList);
+                    long startTime2 = System.currentTimeMillis();
+                    List<MusicInfo> insertionTrack = insertionSort(list2, "nome");
+                    long endTime2 = System.currentTimeMillis();
+                    long executionTime2 = endTime2 - startTime2;
+                    System.out.println(executionTime2);
 
-                for (MusicInfo musicInfo : insertionTrack) {
-                    System.out.println("Ordenação por Seleção Nome Música: " + musicInfo);
-                }
-                break;
+//                    for (MusicInfo musicInfo : insertionTrack) {
+//                        System.out.println("Ordenação por Inserção Nome Música: " + musicInfo);
+//                    }
+                    break;
+
+                case "3":
+                    List<MusicInfo> list3 = new ArrayList<MusicInfo>(musicInfoList);
+                    long startTime3 = System.currentTimeMillis();
+                    List<MusicInfo> selectionArtist = selectionSort(list3, "artista");
+                    long endTime3 = System.currentTimeMillis();
+                    long executionTime3 = endTime3 - startTime3;
+                    System.out.println(executionTime3);
+
+//                    for (MusicInfo musicInfo : selectionArtist) {
+//                        System.out.println("Ordenação por Seleção Artista: " + musicInfo);
+//                    }
+                    break;
+
+                case "4":
+                    List<MusicInfo> list4 = new ArrayList<MusicInfo>(musicInfoList);
+                    long startTime4 = System.currentTimeMillis();
+                    List<MusicInfo> insertionArtist = insertionSort(list4, "artista");
+                    long endTime4 = System.currentTimeMillis();
+                    long executionTime4 = endTime4 - startTime4;
+                    System.out.println(executionTime4);
+
+
+//                     for (MusicInfo musicInfo : insertionArtist) {
+//                          System.out.println("Ordenação por Inserção Artista: " + musicInfo);
+//                     }
+                    break;
+
+                case "5":
+                    sair = false;
+
+                default:
+                    System.out.println("Opção inválida!");
             }
         }
         System.out.println("Fim!");
 
-
-        //List<MusicInfo> selectionArtist = selectionSort(musicInfoList, "artista");
-
-        // for (MusicInfo musicInfo : selectionArtist) {
-        //     System.out.println("Ordenação por Seleção Artista: " + musicInfo);
-        // }
-
-        
-        //List<MusicInfo> insertionArtist = insertionSort(musicInfoList, "artista");
-
-        // for (MusicInfo musicInfo : insertionTrack) {
-        //     System.out.println("Ordenação por Inserção Nome Música: " + musicInfo);
-        // }
-
-        // for (MusicInfo musicInfo : insertionArtist) {
-        //      System.out.println("Ordenação por Inserção Artista: " + musicInfo);
-        // }
     }
 }
