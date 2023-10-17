@@ -4,11 +4,10 @@ import model.MusicInfo;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CSVReader {
-    private static List<MusicInfo> musicInfoList;
+    private List<MusicInfo> musicInfoList;
 
     public CSVReader() {
         this.musicInfoList = new ArrayList<>();

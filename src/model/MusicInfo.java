@@ -1,8 +1,5 @@
 package model;
 
-import java.util.Comparator;
-import java.util.function.Function;
-
 public class MusicInfo {
     private String trackName;
     private String artistName;
