@@ -33,6 +33,8 @@ public class Main {
 
             String op = in.nextLine();
 
+            int comp=0, swap = 0;
+
             switch(op) {
                 case "1":
                     List<MusicInfo> list1 = new ArrayList<MusicInfo>(musicInfoList);
@@ -42,9 +44,9 @@ public class Main {
                     long executionTime = endTime - startTime;
                     System.out.println(executionTime);
 
-//                    for (MusicInfo musicInfo : selectionTrack) {
-//                        System.out.println("Ordenação por Seleção Nome Música: " + musicInfo);
-//                    }
+                    for (MusicInfo musicInfo : selectionTrack) {
+                        System.out.println("Ordenação por Seleção Nome Música: " + musicInfo);
+                    }
 
                     break;
 
@@ -56,9 +58,9 @@ public class Main {
                     long executionTime2 = endTime2 - startTime2;
                     System.out.println(executionTime2);
 
-//                    for (MusicInfo musicInfo : insertionTrack) {
-//                        System.out.println("Ordenação por Inserção Nome Música: " + musicInfo);
-//                    }
+                    for (MusicInfo musicInfo : insertionTrack) {
+                        System.out.println("Ordenação por Inserção Nome Música: " + musicInfo);
+                    }
                     break;
 
                 case "3":
@@ -69,9 +71,9 @@ public class Main {
                     long executionTime3 = endTime3 - startTime3;
                     System.out.println(executionTime3);
 
-//                    for (MusicInfo musicInfo : selectionArtist) {
-//                        System.out.println("Ordenação por Seleção Artista: " + musicInfo);
-//                    }
+                    for (MusicInfo musicInfo : selectionArtist) {
+                        System.out.println("Ordenação por Seleção Artista: " + musicInfo);
+                    }
                     break;
 
                 case "4":
@@ -83,16 +85,16 @@ public class Main {
                     System.out.println(executionTime4);
 
 
-//                     for (MusicInfo musicInfo : insertionArtist) {
-//                          System.out.println("Ordenação por Inserção Artista: " + musicInfo);
-//                     }
+                     for (MusicInfo musicInfo : insertionArtist) {
+                          System.out.println("Ordenação por Inserção Artista: " + musicInfo);
+                     }
                     break;
 
                 case "5":
                     sair = false;
 
                 default:
-                    System.out.println("Opção inválida!");
+                    break;
             }
         }
         System.out.println("Fim!");
