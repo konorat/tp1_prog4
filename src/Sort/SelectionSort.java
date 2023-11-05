@@ -1,13 +1,16 @@
-package Service;
+package Sort;
 
-import model.MusicInfo;
+import Model.MusicInfo;
 
+import java.io.IOException;
 import java.util.List;
+
+import static Service.WriteFile.writeFile;
 
 public class SelectionSort {
 
 
-    public static List<MusicInfo> selectionSort(List<MusicInfo> list, String atributo) {
+    public static List<MusicInfo> selectionSort(List<MusicInfo> list, String atributo) throws IOException {
         int comp = 0;
         int swap = 0;
 
@@ -26,14 +29,16 @@ public class SelectionSort {
                     }
                 }
             }
-            // Trocar o elemento atual com o menor elemento encontrado
+
             MusicInfo temp = list.get(i);
             list.set(i, list.get(indiceMenor));
             list.set(indiceMenor, temp);
             swap++;
         }
-        System.out.println("Comparações: " + comp);
-        System.out.println("Trocas: " + swap);
+
+        writeFile("Selection Sort considerando: " + atributo);
+        writeFile("Comparações: " + comp);
+        writeFile("Trocas: " + swap);
         return list;
     }
 

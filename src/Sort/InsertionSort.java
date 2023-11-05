@@ -1,15 +1,25 @@
-package Service;
+package Sort;
 
-import model.MusicInfo;
+import Model.MusicInfo;
 
-import java.sql.SQLOutput;
+import java.io.IOException;
 import java.util.List;
 
 public class InsertionSort {
+    private static int comp = 0;
+    private static int swap = 0;
 
-    public static List<MusicInfo> insertionSort (List<MusicInfo> list, String atributo){
-        int comp = 0;
-        int swap = 0;
+    public static int getComp() {
+        return comp;
+    }
+
+    public static int getSwap() {
+        return swap;
+    }
+
+    public static List<MusicInfo> insertionSort (List<MusicInfo> list, String atributo) throws IOException {
+//        int comp = 0;
+//        int swap = 0;
 
         for (int i = 1; i < list.size(); i++) {
             MusicInfo mi = list.get(i);
@@ -35,8 +45,7 @@ public class InsertionSort {
                 list.set(j + 1, mi);
             }
         }
-        System.out.println("Comparações: " + comp);
-        System.out.println("Trocas: " + swap);
+
         return list;
     }
 }

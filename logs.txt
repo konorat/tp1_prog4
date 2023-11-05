@@ -1,0 +1,84 @@
+Selection Sort considerando: nome
+Comparações: 453628
+Trocas: 952
+Tempo de execução: 95
+Complexidade: melhor caso: O(n^2) | pior caso: O(n^2)
+ 
+Inserction Sort considerando: nome
+Comparações: 225492
+Trocas: 225492
+Tempo de execução: 54
+Complexidade: melhor caso: O(n) | pior caso: O(n^2)
+ 
+Selection Sort considerando: artista
+Comparações: 453628
+Trocas: 952
+Tempo de execução: 60
+Complexidade: melhor caso: O(n^2) | pior caso: O(n^2)
+ 
+Inserction Sort considerando: artista
+Comparações: 452292
+Trocas: 452292
+Tempo de execução: 30
+Complexidade: melhor caso: O(n) | pior caso: O(n^2)
+ 
+Bubble Sort considerando: artista
+Comparações: 869
+Trocas: 226800
+Tempo de execução: 96
+Complexidade: melhor caso: O(n) | pior caso: O(n^2)
+ 
+Bubble Sort considerando: nome
+Comparações: 912
+Trocas: 225492
+Tempo de execução: 83
+Complexidade: melhor caso: O(n) | pior caso: O(n^2)
+ 
+Shell Sort considerando: nome
+Comparações: 830922879
+Trocas: 830922879
+Tempo de execução: 405
+Complexidade: melhor caso: O(n log² n) | pior caso: O(n^2)
+ 
+Shell Sort considerando: artista
+Comparações: -1732505659
+Trocas: -1732505659
+Tempo de execução: 395
+Complexidade: melhor caso: O(n log² n) | pior caso: O(n^2)
+ 
+Quick Sort considerando: nome
+Comparações: 10694
+Trocas: 6184
+Tempo de execução: 6
+Complexidade: melhor caso: O(n log n) | pior caso: O(n^2)
+ 
+Quick Sort considerando: artista
+Comparações: 21791
+Trocas: 12515
+Tempo de execução: 2
+Complexidade: melhor caso: O(n log n) | pior caso: O(n^2)
+ 
+Heap Sort considerando: nome
+Comparações: 11030
+Trocas: 7680
+Tempo de execução: 8
+Complexidade: melhor caso: O(n log n) | pior caso: O(n log n)
+ 
+Heap Sort considerando: artista
+Comparações: 22094
+Trocas: 15349
+Tempo de execução: 9
+Complexidade: melhor caso: O(n log n) | pior caso: O(n log n)
+ 
+Merge Sort considerando: nome
+Comparações: 8223
+Trocas: 9459
+Tempo de execução: 24
+Complexidade: melhor caso: O(n log n) | pior caso: O(n log n)
+ 
+Merge Sort considerando: nome
+Comparações: 9175
+Trocas: 18918
+Tempo de execução: 10
+Complexidade: melhor caso: O(n log n) | pior caso: O(n log n)
+ 

@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class MusicInfo {
     private String trackName;

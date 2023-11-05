@@ -1,6 +1,6 @@
 package Service;
 
-import model.MusicInfo;
+import Model.MusicInfo;
 
 import java.io.*;
 import java.util.ArrayList;
